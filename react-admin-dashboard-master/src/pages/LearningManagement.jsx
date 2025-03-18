@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useLocation, useNavigate } from "react-router-dom";
 import computer from "../components/images/7922055.jpg"
 import DataScience from "../components/images/18141.jpg"
 import Physics from "../components/images/physics6.jpg"
@@ -7,6 +8,7 @@ import Mathematics from "../components/images/4542742.jpg"
 import AI from "../components/images/AI.jpg"
 import CyberSecurity from "../components/images/3849223.jpg"
 import Renewable from "../components/images/7314.jpg"
+
 
 
 const courses = [
@@ -21,6 +23,8 @@ const courses = [
 ];
 
 export default function LearningManagement() {
+
+  const navigate = useNavigate()
   return (
     <div className="flex gap-2">
         {/* <Sidebar>
@@ -47,7 +51,7 @@ export default function LearningManagement() {
             <div className="p-4">
               <h3 className="text-xl font-semibold">{course.title}</h3>
               <p className="text-gray-600 mt-2">{course.description}</p>
-              <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+              <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors" onClick={()=>{navigate("/course")}}>
                 Enroll Now
               </button>
             </div>

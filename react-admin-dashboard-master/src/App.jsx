@@ -27,6 +27,8 @@ import Question from "./pages/Question"
 // import { useLocation } from "react-router-dom";
 import LandingPages from "./pages/LandingPage";
 import SignUp from "./pages/SignUp";
+import CoursePage from "./pages/Course";
+
 function App() {
 	axios.defaults.baseURL="https://olympiadedu-backend-neh8.onrender.com/api/v1"
     const {setExaminationList,purposeOfRegistration, competitionList, setCompetitionList, ExaminationList} = useContext(storeContext)
@@ -83,6 +85,7 @@ function App() {
 				<Route element={<SubDetails/>} path='/details/:id'/>
 				<Route element={<Invoice/>} path='/subitem/:name'/>
 				<Route element={<Question/>} path="/quiz-questions"/>
+				<Route element={<CoursePage/>} path="/course"/>
 			</Routes>
 		</div>
 	);
