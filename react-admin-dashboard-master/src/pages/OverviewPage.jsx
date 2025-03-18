@@ -10,6 +10,10 @@ import { useState,useEffect ,useContext} from "react";
 import { storeContext } from "../Context";
 import { useNavigate } from "react-router-dom";
 import { div } from "framer-motion/client";
+import {
+  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+  BarChart, Bar, PieChart, Pie, Cell, AreaChart, Area,
+} from "recharts";
 
 
 const OverviewPage = () => {
@@ -64,6 +68,17 @@ const OverviewPage = () => {
 				</motion.div>
 
 				{/* CHARTS */}
+         <div className="bg-white p-4 rounded-lg shadow-md">
+                  <h2 className="text-lg font-semibold text-center">Quiz Performance</h2>
+                  <BarChart width={400} height={250} data={data}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <Bar dataKey="score" fill="#FF8042" />
+                  </BarChart>
+                </div>
         
 
 			
