@@ -22,6 +22,19 @@ const OverviewPage = () => {
     const [viewSub, setViewSub] = useState(false)
     const [openDetails,setOpenDetails] = useState(false)
     const [name,setName]= useState("")
+    const generateData = () => {
+      return courseNames.map((course) => ({
+        name: course,
+        progress: Math.floor(Math.random() * 100),
+        score: Math.floor(Math.random() * 100),
+        engagement: Math.floor(Math.random() * 100),
+        timeSpent: Math.floor(Math.random() * 20) + 5,
+      }));
+    };
+    
+    const data = generateData();
+    
+    const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
       
         const navigate = useNavigate()
         useEffect(()=>{
@@ -69,16 +82,8 @@ const OverviewPage = () => {
 
 				{/* CHARTS */}
          <div className="bg-white p-4 rounded-lg shadow-md">
-                  <h2 className="text-lg font-semibold text-center">Quiz Performance</h2>
-                  <BarChart width={400} height={250} data={data}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
-                    <YAxis />
-                    <Tooltip />
-                    <Legend />
-                    <Bar dataKey="score" fill="#FF8042" />
-                  </BarChart>
-                </div>
+                  
+          </div>
         
 
 			
