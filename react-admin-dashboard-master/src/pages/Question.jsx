@@ -51,7 +51,7 @@ const QuizPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gray-100">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center p-4 bg-gray-100">
       {!quizFinished ? (
         <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
           <div className="flex justify-between items-center mb-4">
