@@ -86,7 +86,8 @@ const OverviewPage = () => {
 				</motion.div>
 
 				{/* CHARTS */}
-         <div className="bg-white p-4 rounded-lg shadow-md">
+        <div className="flex gap-4">
+         <div className=" p-4 rounded-lg shadow-md">
                   <h2 className="text-lg font-semibold text-center">Quiz Performance</h2>
                   <BarChart width={400} height={250} data={data}>
                     <CartesianGrid strokeDasharray="3 3" />
@@ -97,6 +98,19 @@ const OverviewPage = () => {
                     <Bar dataKey="score" fill="#FF8042" />
                   </BarChart>
           </div>
+           <div className=" p-4 rounded-lg shadow-md">
+                    <h2 className="text-lg font-semibold text-center">Engagement Metrics</h2>
+                    <PieChart width={400} height={250}>
+                      <Pie data={data} dataKey="engagement" nameKey="name" cx="50%" cy="50%" outerRadius={80}>
+                        {data.map((_, index) => (
+                          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                        ))}
+                      </Pie>
+                      <Tooltip />
+                    </PieChart>
+          </div>
+          </div>
+          
         
 
 			
