@@ -22,6 +22,11 @@ const OverviewPage = () => {
     const [viewSub, setViewSub] = useState(false)
     const [openDetails,setOpenDetails] = useState(false)
     const [name,setName]= useState("")
+    const courseNames = [
+      "Introduction to Computer Science", "Data Science & Machine Learning",  "Physics Fundamentals", "Engineering Basics", "Mathematics for Scientists",
+      "Artificial Intelligence", "Cybersecurity Essentials", "Renewable Energy Technologies"
+    ];
+    
     const generateData = () => {
       return courseNames.map((course) => ({
         name: course,
@@ -82,7 +87,15 @@ const OverviewPage = () => {
 
 				{/* CHARTS */}
          <div className="bg-white p-4 rounded-lg shadow-md">
-                  
+                  <h2 className="text-lg font-semibold text-center">Quiz Performance</h2>
+                  <BarChart width={400} height={250} data={data}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <Bar dataKey="score" fill="#FF8042" />
+                  </BarChart>
           </div>
         
 
