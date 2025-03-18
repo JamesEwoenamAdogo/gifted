@@ -23,6 +23,7 @@ import SubDetails from "./pages/subDetails"
 import Invoice from "./pages/Invoice";
 import axios from "axios";
 import Login from "./pages/Login";
+import Question from "./pages/Question"
 // import { useLocation } from "react-router-dom";
 import LandingPages from "./pages/LandingPage";
 import SignUp from "./pages/SignUp";
@@ -81,7 +82,7 @@ function App() {
 				<Route element={<InputSchool/>} path='/input-school'/>
 				<Route element={<SubDetails/>} path='/details/:id'/>
 				<Route element={<Invoice/>} path='/subitem/:name'/>
-				{/* <Route element={<Questions/>} path="/quiz-questions"/> */}
+				<Route element={<Questions/>} path="/quiz-questions"/>
 			</Routes>
 		</div>
 	);

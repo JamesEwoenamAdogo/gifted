@@ -97,7 +97,7 @@ export default function AssessmentManagement() {
   const navigate = useNavigate();
 
   const startQuiz = (quiz) => {
-    navigate("/quiz-questions", { state: { questions: quiz.questions } });
+    navigate('/quiz-questions', { state: { questions: quiz.questions } });
   };
 
   return (
