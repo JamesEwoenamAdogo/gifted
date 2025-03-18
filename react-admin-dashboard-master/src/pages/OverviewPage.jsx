@@ -86,7 +86,7 @@ const OverviewPage = () => {
 				</motion.div>
 
 				{/* CHARTS */}
-        <div className="flex gap-2">
+        <div className="flex gap-2 bg-white">
          <div className=" p-4 rounded-lg shadow-md">
                   <h2 className="text-lg font-semibold text-center">Quiz Performance</h2>
                   <BarChart width={400} height={250} data={data}>
