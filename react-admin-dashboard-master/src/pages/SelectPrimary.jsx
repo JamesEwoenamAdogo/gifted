@@ -21,12 +21,12 @@ const SelectStudent = () => {
     {
       name: "Grade 9",
       
-      description: "Higher education students",
+      description: "Elementary education students",
     },
     {
       name: "Grade 8",
       
-      description: "Secondary education students",
+      description: "Elementary education students",
     },
     {
       name: "Grade 7",
