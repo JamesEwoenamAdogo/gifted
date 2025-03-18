@@ -51,7 +51,7 @@ function App() {
 
 	
 	return (
-		<div className='flex h-screen overflow-auto'>
+		<div className= {`${(location.pathname=="/overview"||location.pathname=="/community"||location.pathname=="/learning-management"||location.pathname=="/assessment-management"||location.pathname=="/ai-agent"||location.pathname=="/invoice"||location.pathname=="/diagnostics")?'flex h-screen overflow-hidden':flex h-screen overflow-auto'}`}>
 			{/* BG */}
 			{/* <div className='fixed inset-0 z-0'>
 				<div className='absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 opacity-80' />
