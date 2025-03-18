@@ -82,7 +82,7 @@ function App() {
 				<Route element={<InputSchool/>} path='/input-school'/>
 				<Route element={<SubDetails/>} path='/details/:id'/>
 				<Route element={<Invoice/>} path='/subitem/:name'/>
-				<Route element={<Questions/>} path="/quiz-questions"/>
+				<Route element={<Question/>} path="/quiz-questions"/>
 			</Routes>
 		</div>
 	);
