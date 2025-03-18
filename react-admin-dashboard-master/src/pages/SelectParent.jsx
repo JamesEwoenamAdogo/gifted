@@ -16,7 +16,7 @@ const brandColors = {
   gray: '#F3F4F6',
 };
 
-const Select = ({ competitionList }) => {
+const SelectParent = ({ competitionList }) => {
   const {
     studychecked,
     prepChecked,
@@ -206,4 +206,4 @@ const Select = ({ competitionList }) => {
   );
 };
 
-export default Select;
+export default SelectParent;
